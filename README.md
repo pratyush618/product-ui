@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Product Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple web application for managing products.
 
-## Available Scripts
+## Table of Contents
+- [Description](#description)
+- [Backend Repo for this UI](https://github.com/pratyush618/Product-Management-Backend)
+- [Features](#features)
+- [API Endpoints](#api-endpoints)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Backend Repository](https://github.com/pratyush618/Product-Management-Backend)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+This project is a Product Management System implemented using React.js. It allows users to add, edit, and delete products. The user interface is built with a responsive navigation bar and clean forms for adding and editing products.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- View a list of all products on the home page.
+- Add new products with details like name, description, price, and status.
+- Edit existing products.
+- Delete products from the list.
 
-### `npm test`
+## API Endpoints
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **GET /api/products**: 
+  - *Description*: Get a list of all products.
 
-### `npm run build`
+- **GET /api/products/:id**: 
+  - *Description*: Get details of a specific product.
+  - *Parameters*:
+    - `id`: Product ID
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **POST /api/products**: 
+  - *Description*: Add a new product.
+  - *Request Body*:
+    - *Example*:
+      ```json
+      {
+        "productName": "Product Name",
+        "description": "Product Description",
+        "price": 19.99,
+        "status": "Active"
+      }
+      ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **PUT /api/products/:id**: 
+  - *Description*: Update details of a specific product.
+  - *Parameters*:
+    - `id`: Product ID
+  - *Request Body*:
+    - *Example*:
+      ```json
+      {
+        "productName": "Updated Product Name",
+        "description": "Updated Product Description",
+        "price": 29.99,
+        "status": "Inactive"
+      }
+      ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **DELETE /api/products/:id**: 
+  - *Description*: Delete a specific product.
+  - *Parameters*:
+    - `id`: Product ID
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js and npm installed on your machine.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/your-username/product-management-system.git
+```
